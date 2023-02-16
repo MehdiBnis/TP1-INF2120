@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Scanner;
 import java.lang.*;
 
@@ -11,9 +10,9 @@ public class LectureFichier {
             File Fichier = new File("test1.txt");
             Scanner Lecteur = new Scanner(Fichier);
 
-            ArrayList<int[]> ListeDimensions = new ArrayList<int[]>();
-            String[] ValeursLigne = new String[2];
-            int[] TabDimensions = null;
+            ArrayList<int[]> ListeDimensions = new ArrayList<>();
+            String[] ValeursLigne;
+            int[] TabDimensions;
             while (Lecteur.hasNextLine()){
 
                 TabDimensions = new int[2];
