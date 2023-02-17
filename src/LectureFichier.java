@@ -5,12 +5,12 @@ import java.util.Scanner;
 import java.lang.*;
 
 public class LectureFichier {
+    public static ArrayList<int[]> ListeDimensions = new ArrayList<>();
     public static void lectureFichier() {
         try {
             File Fichier = new File("test1.txt");
             Scanner Lecteur = new Scanner(Fichier);
 
-            ArrayList<int[]> ListeDimensions = new ArrayList<>();
             String[] ValeursLigne;
             int[] TabDimensions;
             while (Lecteur.hasNextLine()){
@@ -27,16 +27,12 @@ public class LectureFichier {
 
 
             }
-            for (int[] Tab : ListeDimensions) {
-                for (int Valeur : Tab) {
-                    System.out.print(Valeur + " ");
-                }
-                System.out.println();
-            }
-
             Lecteur.close();
         } catch (FileNotFoundException e) {
             System.out.println("Aucun fichier n'a été trouvé.");
         }
+    }
+    public static ArrayList<int[]> retournerListeDimensions(){
+        return ListeDimensions;
     }
 }
